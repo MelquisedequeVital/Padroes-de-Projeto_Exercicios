@@ -1,18 +1,18 @@
 package locadora;
 
-import locadora.interace.Alugavel;
+import locadora.interfaces.Alugavel;
 
 public class Locacao {
-	private Alugavel carro;
+	private Alugavel item;
 	private int diasAlugado;
 
-	public Locacao(Alugavel carro, int diasAlugado) {
-		this.carro = carro;
+	public Locacao(Alugavel item, int diasAlugado) {
+		this.item = item;
 		this.diasAlugado = diasAlugado;
 	}
 
-	public Alugavel getCarro() {
-		return carro;
+	public Alugavel getItem() {
+		return item;
 	}
 
 	public int getDiasAlugado() {
@@ -20,17 +20,13 @@ public class Locacao {
 	}
 
 	public double valorDeUmaLocacao() {
-		double valorLocacao = getCarro().getValorDaLocacao(getDiasAlugado());
+		double valorLocacao = getItem().getValorDaLocacao(getDiasAlugado());
 
 		return valorLocacao;
 	}
 
 	public int getPontosDeAlugadorFrequente() {
-		int pontos = getCarro().getPontosDeAlugadorFrequente(getDiasAlugado());
-		// trata de pontos de alugador frequente
-		// adiciona bonus para aluguel de um lançamento por pelo menos 2 dias
-		
-
+		int pontos = getItem().getPontosDeAlugadorFrequente(getDiasAlugado());
 		return pontos;
 	}
 }

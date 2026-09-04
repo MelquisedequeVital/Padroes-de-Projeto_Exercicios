@@ -29,26 +29,20 @@ public class Cliente {
 
 		while (alugueis.hasNext()) {
 			Locacao cada = alugueis.next();
-
-			// mostra valores para este aluguel
 			sequencia++;
 			resultado += adicionarLinhaExtrato(cada, cada.valorDeUmaLocacao(), sequencia);
 
-		} // while
-
-		// adiciona rodapé
+		} 
 		resultado += adicionarRodapeExtrato(getValorTotal(), getPontosTotaisDeAlugadorFrequente());
 
 		return resultado;
 	}
 
 	private String adicionarLinhaExtrato(Locacao locacao, double valorLocacao, int sequencia) {
-		// O formato foi ajustado para incluir a coluna de diárias e alinhar
-		// perfeitamente com o cabeçalho.
 		return String.format("%02d. %-20s %-5d %6d    R$ %8.2f" + fimDeLinha,
 				sequencia,
-				locacao.getCarro().getDescricao(),
-				locacao.getCarro().getAno(),
+				locacao.getItem().getDescricao(),
+				locacao.getItem().getAno(),
 				locacao.getDiasAlugado(), // Ajuste para o nome correto do seu método (ex: getDias())
 				valorLocacao);
 	}
@@ -104,7 +98,7 @@ public class Cliente {
 			resultado += String.format(
 					"<tr><th>%02d.</th><th>%s</th><th>%4d</th><th>%2d</th><th>R$%8.2f</th></tr>" + fimDeLinha,
 					sequencia,
-					cada.getCarro().getDescricao(), cada.getCarro().getAno(),
+					cada.getItem().getDescricao(), cada.getItem().getAno(),
 					cada.getDiasAlugado(), cada.valorDeUmaLocacao());
 		} // while
 			// adiciona rodapé
