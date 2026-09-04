@@ -1,8 +1,5 @@
 package locadora;
 
-import locadora.classificacao.Basica;
-import locadora.classificacao.Familia;
-import locadora.classificacao.Luxo;
 import locadora.classificacao.abstratas.Classificacao;
 import locadora.factory.ClassificacaoFactory;
 import locadora.interfaces.Alugavel;

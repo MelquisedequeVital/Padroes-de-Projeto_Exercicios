@@ -21,9 +21,9 @@ public class Luxo extends Classificacao {
 
     @Override
     public int getPontosDeAlugadorFrequente(int diasAlugado) {
-        int pontos = 1;
+        int pontos = PONTO_SIMPLES;
         if (diasAlugado > 2){
-            pontos += 2;
+            pontos += PONTO_EXTRA;
         }
         return pontos;
     }
