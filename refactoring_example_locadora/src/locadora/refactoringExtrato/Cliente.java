@@ -28,7 +28,6 @@ public class Cliente {
 		return itensAlugados;
 	}
 
-	
 	public double getValorTotal() {
 		double valorTotal = 0.0;
 		Iterator<Locacao> locacoes = itensAlugados.iterator();
