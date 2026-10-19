@@ -23,4 +23,9 @@ public class Usuario {
     public String getSenha(){
         return this.senha;
     }
+
+    @Override
+    public String toString(){
+        return this.username;
+    }
 }
