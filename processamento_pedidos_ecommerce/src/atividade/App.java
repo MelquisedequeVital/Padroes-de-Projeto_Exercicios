@@ -9,7 +9,7 @@ import atividade.chain.ProcessamentoPedido;
 public class App {
     public static void main(String[] args) throws Exception {
         Pedido pedido = new Pedido(20);
-        pedido.setPedidoEmEstoque(true);
+        pedido.setPedidoEmEstoque(false);
 
         ProcessamentoPedido pipeline = new Estoque();
         pipeline.setProx(new Frete())

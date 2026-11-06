@@ -4,7 +4,7 @@ import atividade.Pedido;
 
 public abstract class ProcessamentoPedido {
 
-    private ProcessamentoPedido prox;
+    protected ProcessamentoPedido prox;
 
     public ProcessamentoPedido setProx(ProcessamentoPedido prox){
         this.prox = prox;

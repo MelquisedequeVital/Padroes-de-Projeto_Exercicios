@@ -12,6 +12,7 @@ public class Estoque extends ProcessamentoPedido{
             super.processar(pedido);
         } else {
             System.out.println("Pedido cancelado: Produto fora de estoque.");
+            return;
         }
     }
 }
